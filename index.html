@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Docs - Advanced</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Dark Mode Toggle -->
+  <header>
+    <h1>Tech Docs</h1>
+    <button id="themeToggle" class="tooltip" data-tooltip="Toggle Theme">🌙</button>
+  </header>
+
+  <!-- Sidebar Navigation -->
+  <nav id="sidebar">
+    <ul>
+      <!-- Section 1 -->
+      <li>
+        <span class="collapsible">Basics of JavaScript</span>
+        <ul class="hidden">
+          <li><a href="#intro">Introduction</a></li>
+          <li><a href="#setup">Setup</a></li>
+          <li><a href="#syntax">JavaScript Syntax</a></li>
+          <li><a href="#comments">JavaScript Comments</a></li>
+        </ul>
+      </li>
+      <!-- Section 2 -->
+      <li>
+        <span class="collapsible">Core Concepts</span>
+        <ul class="hidden">
+          <li><a href="#variables">Variables & Data Types</a></li>
+          <li><a href="#operators">Operators</a></li>
+          <li><a href="#functions">Functions</a></li>
+          <li><a href="#scope">Scope</a></li>
+        </ul>
+      </li>
+      <!-- Section 3 -->
+      <li>
+        <span class="collapsible">Advanced Topics</span>
+        <ul class="hidden">
+          <li><a href="#async">Asynchronous JS</a></li>
+          <li><a href="#modules">Modules</a></li>
+          <li><a href="#promises">Promises</a></li>
+          <li><a href="#closures">Closures</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section id="intro">
+      <h2>Introduction</h2>
+      <p>JavaScript is a versatile programming language used for dynamic web development.</p>
+    </section>
+
+    <section id="setup">
+      <h2>Setup</h2>
+      <p>Follow these steps to set up your environment:</p>
+      <pre><code id="setupCode">npm install cool-package</code></pre>
+      <button class="copy-btn" data-target="setupCode">Copy</button>
+    </section>
+
+    <section id="syntax">
+      <h2>JavaScript Syntax</h2>
+      <p>The syntax of JavaScript is simple and easy to learn:</p>
+      <pre><code>
+let x = 10; // Declare a variable
+console.log(x); // Output the value of x
+      </code></pre>
+    </section>
+
+    <section id="comments">
+      <h2>JavaScript Comments</h2>
+      <p>Use comments to make your code readable:</p>
+      <pre><code>
+// This is a single-line comment
+/* This is a multi-line comment */
+      </code></pre>
+    </section>
+
+    <section id="variables">
+      <h2>Variables & Data Types</h2>
+      <p>Learn about JavaScript variables and their types:</p>
+      <pre><code>
+let name = "John"; // String
+let age = 25; // Number
+let isAdmin = false; // Boolean
+      </code></pre>
+    </section>
+
+    <section id="operators">
+      <h2>Operators</h2>
+      <p>JavaScript supports various operators:</p>
+      <pre><code>
+let sum = 10 + 5; // Addition
+let isEqual = 10 == "10"; // Comparison
+      </code></pre>
+    </section>
+
+    <section id="functions">
+      <h2>Functions</h2>
+      <p>Functions are blocks of code that can be reused:</p>
+      <pre><code>
+function greet(name) {
+  return "Hello, " + name;
+}
+console.log(greet("Alice")); // Output: Hello, Alice
+      </code></pre>
+    </section>
+
+    <section id="scope">
+      <h2>Scope</h2>
+      <p>Scope determines the accessibility of variables:</p>
+      <pre><code>
+let globalVar = "I am global";
+
+function testScope() {
+  let localVar = "I am local";
+  console.log(globalVar); // Accessible
+  console.log(localVar); // Accessible
+}
+
+console.log(localVar); // Error: not defined
+      </code></pre>
+    </section>
+
+    <section id="async">
+      <h2>Asynchronous JS</h2>
+      <p>Understand promises, async/await, and callbacks:</p>
+      <pre><code>
+fetch('https://api.example.com/data')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+      </code></pre>
+    </section>
+
+    <section id="modules">
+      <h2>Modules</h2>
+      <p>Learn how to structure your JavaScript applications:</p>
+      <pre><code>
+// In module.js
+export function greet(name) {
+  return `Hello, ${name}`;
+}
+
+// In main.js
+import { greet } from './module.js';
+console.log(greet("Alice"));
+      </code></pre>
+    </section>
+
+    <section id="promises">
+      <h2>Promises</h2>
+      <p>Promises help handle asynchronous code in JavaScript:</p>
+    </section>
+
+    <section id="closures">
+      <h2>Closures</h2>
+      <p>Closures enable functions to remember the scope in which they were created:</p>
+    </section>
+  </main>
+
+  <!-- Search Bar -->
+  <div id="search">
+    <input type="text" id="searchBox" placeholder="Search...">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
